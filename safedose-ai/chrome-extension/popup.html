@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeDose.ai</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="popup-container">
+        <header class="popup-header">
+            <h1>🔍 SafeDose.ai</h1>
+            <p>Misinformation Detection</p>
+        </header>
+
+        <div class="popup-content">
+            <!-- Quick Analysis Section -->
+            <section class="quick-analysis">
+                <h3>Quick Analysis</h3>
+                <textarea id="textInput" placeholder="Paste text to analyze for misinformation..."></textarea>
+                <button id="analyzeBtn" class="primary-btn">Analyze Text</button>
+            </section>
+
+            <!-- Analysis Results -->
+            <section id="resultsSection" class="results-section" style="display: none;">
+                <h3>Analysis Results</h3>
+                <div id="resultsContent"></div>
+            </section>
+
+            <!-- Settings Section -->
+            <section class="settings-section">
+                <h3>Settings</h3>
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="enabledToggle" checked>
+                        Enable SafeDose.ai
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="autoAnalyzeToggle" checked>
+                        Auto-analyze pages
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="tooltipsToggle" checked>
+                        Show tooltips
+                    </label>
+                </div>
+            </section>
+
+            <!-- Status Section -->
+            <section class="status-section">
+                <div id="apiStatus" class="status-item">
+                    <span class="status-label">API Status:</span>
+                    <span id="apiStatusText" class="status-value">Checking...</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Version:</span>
+                    <span class="status-value">1.0.0</span>
+                </div>
+            </section>
+        </div>
+
+        <footer class="popup-footer">
+            <a href="https://safedose.ai" target="_blank">Visit SafeDose.ai</a>
+            <button id="historyBtn" class="secondary-btn">View History</button>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
